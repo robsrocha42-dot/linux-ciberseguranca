@@ -1,3 +1,23 @@
+# Sessão 4 - Gestão Segura de Acessos Remotos SSH em Linux
+
+**Módulo:** Linux e Cibersegurança  
+**Objetivo:** OA4. Aplicar  
+
+---
+
+## 1. Configuração do Daemon SSH (`sshd_config`)
+
+```text
+Port 2222
+PermitRootLogin no
+PasswordAuthentication no
+```
+
+---
+
+## 2. Evidência de Execução Completa no Terminal
+
+```bash
 root@ip-10-128-147-41:~# sudo adduser teste
 fatal: The user `teste' already exists.
 root@ip-10-128-147-41:~# sudo adduser teste1
@@ -80,9 +100,9 @@ root@ip-10-128-147-41:~# ssh -i ~/.ssh/ed25519 -p 2222 teste1@127.0.0.1
 Warning: Identity file /root/.ssh/ed25519 not accessible: No such file or directory.
 Welcome to Ubuntu 24.04.4 LTS (GNU/Linux 6.17.0-1012-aws x86_64)
 
- * Documentation:  https://help.ubuntu.com
- * Management:     https://landscape.canonical.com
- * Support:        https://ubuntu.com/pro
+ * Documentation:  [https://help.ubuntu.com](https://help.ubuntu.com)
+ * Management:     [https://landscape.canonical.com](https://landscape.canonical.com)
+ * Support:        [https://ubuntu.com/pro](https://ubuntu.com/pro)
 
   System information as of Sun Jul 26 18:56:09 UTC 2026
 
@@ -94,7 +114,7 @@ Welcome to Ubuntu 24.04.4 LTS (GNU/Linux 6.17.0-1012-aws x86_64)
  * Ubuntu Pro delivers the most comprehensive open source security and
    compliance features.
 
-   https://ubuntu.com/aws/pro
+   [https://ubuntu.com/aws/pro](https://ubuntu.com/aws/pro)
 
 Expanded Security Maintenance for Applications is not enabled.
 
@@ -103,11 +123,10 @@ Expanded Security Maintenance for Applications is not enabled.
 To see these additional updates run: apt list --upgradable
 
 83 additional security updates can be applied with ESM Apps.
-Learn more about enabling ESM Apps service at https://ubuntu.com/esm
+Learn more about enabling ESM Apps service at [https://ubuntu.com/esm](https://ubuntu.com/esm)
 
 
 The list of available updates is more than a week old.
 To check for new updates run: sudo apt update
-PermitRootLogin no
-PasswordAuthentication no
+```
 
